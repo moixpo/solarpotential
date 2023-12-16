@@ -161,13 +161,19 @@ LONGITUDE = 7.451  #PJ
 LATITUDE = 46.208  #VEX
 LONGITUDE = 7.394  #VEX
 
-ANGLE = 22 # 	Inclination angle from horizontal plane of the (fixed) PV system.
-ANGLE2 = 17
-ASPECT = 65 #	F 	No 	0 	Orientation (azimuth) angle of the (fixed) PV system, 0=south, 90=west, -90=east.
+#LATITUDE = 46.229  #Vuissoz Conthey
+#LONGITUDE = 7.302  ##Vuissoz Conthey
+
+
+ANGLE = 20 # 	Inclination angle from horizontal plane of the (fixed) PV system.
+ANGLE2 = 20
+ASPECT = -30 #	F 	No 	0 	Orientation (azimuth) angle of the (fixed) PV system, 0=south, 90=west, -90=east.
+ASPECT2 = ASPECT+180
+ASPECT = 62
 ASPECT2 = ASPECT-180
 
 LOSSES=14   #%
-PEAKPOWER= 8.0 #kWp
+PEAKPOWER= 10 #kWp
 
 WATERMARK_PICTURE='logo.png'
 WATERMARK_PICTURE='LogoAlbedo_90x380.png'
@@ -611,3 +617,5 @@ fig_solar_typical_day.figimage(im, 10, 10, zorder=3, alpha=.2)
 fig_solar_potential.savefig("ReportExport/SolarPotential.png")
 fig_solar_typical_day.savefig("ReportExport/TypicalDay.png")
 fig_diffuse_direct.savefig("ReportExport/DiffuseDirectProdJanuary.png")
+
+plt.show()
